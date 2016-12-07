@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{23650C04-6E8C-49E3-AE5A-FC039AA9DB47}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BA96AC6E-9427-463A-82BF-879E5AE344A9}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "GoalSetterREST", "src\GoalSetterREST\GoalSetterREST.xproj", "{B472BC60-0BFA-40ED-94A6-F3A0BE43900C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B472BC60-0BFA-40ED-94A6-F3A0BE43900C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B472BC60-0BFA-40ED-94A6-F3A0BE43900C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B472BC60-0BFA-40ED-94A6-F3A0BE43900C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B472BC60-0BFA-40ED-94A6-F3A0BE43900C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B472BC60-0BFA-40ED-94A6-F3A0BE43900C} = {23650C04-6E8C-49E3-AE5A-FC039AA9DB47}
+	EndGlobalSection
+EndGlobal
