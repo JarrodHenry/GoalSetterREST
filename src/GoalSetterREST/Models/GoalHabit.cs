@@ -7,6 +7,10 @@ namespace GoalSetterREST.Models
 {
     public class GoalHabit
     {
+        public GoalHabit()
+        {
+        }
+
         public int numberTimes { get; set; }
 
         public string name { get; set; }

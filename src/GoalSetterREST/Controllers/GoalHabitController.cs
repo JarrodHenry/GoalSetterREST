@@ -19,11 +19,15 @@ namespace GoalSetterREST.Controllers
         [HttpGet]
         public GoalHabit Get()
         {
-            Random rnd = new Random();
-            int month = rnd.Next(1, 13); // creates a number between 1 and 12
-            int card = rnd.Next(52); // creates a number between 0 and 51
+            using (var db = new GoalSetterContext())
+            {
 
-            return new Models.GoalHabit { name = "Habit " + month, numberTimes = card };
+
+                var goalHabit = db.GoalHabits.First();
+
+                return goalHabit;
+            }
+            
         }
 
         // GET api/values/5

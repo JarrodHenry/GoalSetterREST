@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Builder;
+using GoalSetterREST.Models;
+using System.Data.Entity;
 
 namespace GoalSetterREST
 {
@@ -21,5 +23,12 @@ namespace GoalSetterREST
 
             host.Run();
         }
+    }
+
+    public class GoalSetterContext : DbContext
+    {
+        public DbSet<GoalNumber> GoalNumbers { get; set; }
+        public DbSet<GoalListItem> GoalListItems { get; set; }
+        public DbSet<GoalHabit> GoalHabits { get; set; }
     }
 }

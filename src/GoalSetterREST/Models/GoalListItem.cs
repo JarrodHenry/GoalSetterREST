@@ -7,8 +7,13 @@ namespace GoalSetterREST.Models
 {
     public class GoalListItem
     {
-        public GoalListItem(string name, bool itemChecked)
+        public GoalListItem()
         {
+
+        }
+        public GoalListItem(string projName, string name, bool itemChecked)
+        {
+            this.projName = projName;
             this.name = name;
             this.itemChecked = itemChecked;
         }
@@ -17,6 +22,8 @@ namespace GoalSetterREST.Models
         public bool itemChecked { get; set; }
 
         public int id { get; set; }
+
+        public string projName { get; set; }
 
     }
 }

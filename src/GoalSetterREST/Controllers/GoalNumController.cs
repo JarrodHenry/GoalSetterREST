@@ -18,8 +18,13 @@ namespace GoalSetterREST.Controllers
         [HttpGet]
         public GoalNumber Get()
         {
-            
-            return new Models.GoalNumber { current=295, target=150, name="Arbitrary Number" };
+            using (var db = new GoalSetterContext())
+            {
+                var goalNumber = db.GoalNumbers.First();
+                return goalNumber;
+            }
+
+           
         }
 
         // GET api/values/5

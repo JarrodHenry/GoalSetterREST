@@ -18,17 +18,21 @@ namespace GoalSetterREST.Controllers
         [HttpGet]
         public List<GoalListItem> Get()
         {
+            using (var db = new GoalSetterContext())
+            {
 
-            
-            var arList = new List<GoalListItem>();
-            arList.Add(new GoalListItem("item 1", false));
-            arList.Add(new GoalListItem("item 2", false));
-            arList.Add(new GoalListItem("item 3", false));
-            arList.Add(new GoalListItem("item 4", false));
-            arList.Add(new GoalListItem("item 5", false));
+                //var arList = new List<GoalListItem>();
+                //arList.Add(new GoalListItem("Beta", "item 1", false));
+                //arList.Add(new GoalListItem("Beta", "item 2", false));
+                //arList.Add(new GoalListItem("Beta", "item 3", false));
+                //arList.Add(new GoalListItem("Beta", "item 4", false));
+                //arList.Add(new GoalListItem("Beta", "item 5", false));
 
+                var arList = db.GoalListItems.ToList<GoalListItem>();
+
+                return arList;
+            }
             
-            return arList;
 
         }
 
