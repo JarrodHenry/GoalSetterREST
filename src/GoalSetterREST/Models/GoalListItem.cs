@@ -17,6 +17,7 @@ namespace GoalSetterREST.Models
             this.name = name;
             this.itemChecked = itemChecked;
         }
+        
         public string name { get; set; }
 
         public bool itemChecked { get; set; }
@@ -25,5 +26,6 @@ namespace GoalSetterREST.Models
 
         public string projName { get; set; }
 
+  
     }
 }

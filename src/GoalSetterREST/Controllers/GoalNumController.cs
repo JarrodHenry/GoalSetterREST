@@ -36,8 +36,25 @@ namespace GoalSetterREST.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public void Post(string current)
         {
+            int currNum = Convert.ToInt32(current);
+
+            using (var db = new GoalSetterContext())
+            {
+                var allnums = db.Set<GoalNumber>();
+                foreach (var row in allnums)
+                {
+                    row.current = currNum;
+                   
+                }
+                
+                db.SaveChanges();
+
+            }
+            
+
+
         }
 
         // PUT api/values/5
