@@ -39,8 +39,21 @@ namespace GoalSetterREST.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public void Post(string times)
         {
+            int currNum = Convert.ToInt32(times);
+
+            using (var db = new GoalSetterContext())
+            {
+                // For now, pull them and update them all, but eventually we will switch to per unit.
+                var allnums = db.Set<GoalHabit>();
+                foreach (var row in allnums)
+                {
+                    row.numberTimes = currNum;
+                }
+                db.SaveChanges();
+
+            }
         }
 
         // PUT api/values/5
